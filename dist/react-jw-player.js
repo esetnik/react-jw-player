@@ -119,8 +119,9 @@ var ReactJWPlayer = function (_Component) {
     value: function shouldComponentUpdate(nextProps) {
       var hasFileChanged = this.props.file !== nextProps.file;
       var hasPlaylistChanged = !(0, _reactFastCompare2.default)(this.props.playlist, nextProps.playlist);
+      var hasPlayerIdChanged = this.props.playerId !== nextProps.playerId;
 
-      return hasFileChanged || hasPlaylistChanged;
+      return hasFileChanged || hasPlaylistChanged || hasPlayerIdChanged;
     }
   }, {
     key: 'componentDidUpdate',
